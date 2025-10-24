@@ -187,27 +187,9 @@ Pull Requests bem-vindos!
 
 **Feito para quem decide com dados, não com achismo.**
 
----
-```
-
----
-
-### Próximos Passos (opcional)
-
-Se quiser, posso gerar:
-
-- `LICENSE` (MIT)
-- `.gitignore`
-- `Dockerfile`
-- `streamlit_app.py` para deploy
-- PDF export com `pdfkit` ou `streamlit-pdf`
-
-É só pedir
-
-Agora é só criar o repositório no GitHub e fazer o upload!  
-**Link sugerido:** `github.com/seu-empresa/dashboard-estoque-inteligente`
-```
-
-**Pronto para brilhar no GitHub**  
-Este README transforma seu projeto em um **case de sucesso técnico e de UX**.
-```
+## Autores
+Emanoel Genez 
+Guilherme de Andrade 
+Guilherme Ribeiro 
+Hugo Leonardo 
+Wendler José 
