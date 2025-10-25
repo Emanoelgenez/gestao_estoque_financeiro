@@ -1,6 +1,7 @@
 import plotly.express as px
 import plotly.graph_objects as go
 import pandas as pd
+import streamlit as st
 
 # Paleta aprimorada — daltônica e contrastiva
 PALETTE = {
@@ -12,17 +13,51 @@ PALETTE = {
     "neutral_bg": "#F9FAFB",
 }
 
+
 def base_layout(fig, title: str):
+    # Detecta tema ativo (dark/light)
+    theme = st.get_option("theme.base")
+
+    if theme == "dark":
+        text_color = "#F5F5F5"
+        axis_color = "#E0E0E0"
+        grid_color = "rgba(255,255,255,0.15)"
+        paper_color = "#0E1117"
+    else:
+        text_color = "#1E1E1E"
+        axis_color = "#333333"
+        grid_color = "rgba(0,0,0,0.08)"
+        paper_color = "white"
+
     fig.update_layout(
-        title=dict(text=title, x=0.02, xanchor="left", font=dict(size=15, color="#004C91")),
-        font=dict(family="Segoe UI, Roboto, sans-serif", size=12, color="#222"),
-        plot_bgcolor="white",
-        paper_bgcolor="white",
+        title=dict(
+            text=title,
+            x=0.02,
+            xanchor="left",
+            font=dict(size=15, color=text_color)
+        ),
+        font=dict(family="Segoe UI, Roboto, sans-serif", size=12, color=text_color),
+        plot_bgcolor=paper_color,
+        paper_bgcolor=paper_color,
         margin=dict(l=40, r=40, t=60, b=40),
-        yaxis=dict(showgrid=True, gridcolor="rgba(0,0,0,0.07)", zeroline=False),
-        xaxis=dict(showgrid=False),
+        yaxis=dict(
+            showgrid=True,
+            gridcolor=grid_color,
+            zeroline=False,
+            color=axis_color,
+            title=dict(font=dict(color=axis_color)),
+            tickfont=dict(color=axis_color)
+        ),
+        xaxis=dict(
+            showgrid=False,
+            color=axis_color,
+            title=dict(font=dict(color=axis_color)),
+            tickfont=dict(color=axis_color)
+        ),
     )
+
     return fig
+
 
 
 def plot_lucro_fornecedor(df, top_n=7):
