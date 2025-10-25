@@ -1,7 +1,7 @@
 # Dashboard de Estoque e Rentabilidade  
 **Monitoramento inteligente. Decisões em tempo real.**
 
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://your-streamlit-app-url)  
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://gestaoestoquefinanceiro-bdoylabg4jzzxcvr5ngtte.streamlit.app/)  
 ![Python](https://img.shields.io/badge/Python-3.11-blue) ![Streamlit](https://img.shields.io/badge/Streamlit-1.38-red) ![Plotly](https://img.shields.io/badge/Plotly-5.18-orange)  
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 
@@ -29,14 +29,13 @@ Insight → KPIs → Onde Ganha → Onde Perde → Tendência → Ação
 
 | Feature | Impacto |
 |-------|--------|
-| **Insight automático do período** | "Lucro subiu 4.8% vs anterior" — contexto imediato |
+| **Insight automático do período** | "Lucro caiu 87.4% vs anterior" — contexto imediato |
 | **KPIs agrupados em cards com ícones** | Leitura em < 5 segundos |
 | **Barras negativas em laranja** | Prejuízo visualmente inconfundível |
 | **Donut chart com rótulos internos** | Proporção crítica clara (8.28%) |
 | **Filtros dinâmicos (fornecedor, período, top N)** | Análise sob demanda |
 | **Exportação CSV com 1 clique** | Dados nas mãos do time |
 | **Dark/Light mode automático** | Experiência premium em qualquer dispositivo |
-| **Glassmorphism + hover animations** | UI moderna, tech-savvy |
 
 ---
 

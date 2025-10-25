@@ -52,14 +52,28 @@ st.markdown(
     """, unsafe_allow_html=True
 )
 
-# INSIGHT
-lucro_atual = kpis["Lucro Líquido (R$)"]
-lucro_anterior = df_filtrado[df_filtrado["mes"] < df_filtrado["mes"].max()]["lucro_liquido"].sum()
-pct = ((lucro_atual - lucro_anterior) / lucro_anterior * 100) if lucro_anterior else 0
+# INSIGHT (comparação mês a mês)
+df_mensal = df_filtrado.groupby("mes")["lucro_liquido"].sum().sort_index()
+
+if len(df_mensal) >= 2:
+    lucro_atual = df_mensal.iloc[-1]
+    lucro_anterior = df_mensal.iloc[-2]
+    pct = ((lucro_atual - lucro_anterior) / lucro_anterior * 100) if lucro_anterior else 0
+else:
+    lucro_atual = df_mensal.iloc[-1] if len(df_mensal) else 0
+    pct = 0
+
 var = "subiu" if pct >= 0 else "caiu"
 tone = "warning" if kpis["Itens em Estoque Crítico"] > 0 else "info"
-insight_card("Insight do Período", f"O lucro líquido <strong>{var} {abs(pct):.1f}%</strong> em relação ao período anterior.<br>Estoque crítico: <strong>{kpis['Itens em Estoque Crítico']}</strong> itens.", tone)
+
+insight_card(
+    "Insight do Período",
+    f"O lucro líquido <strong>{var} {abs(pct):.1f}%</strong> em relação ao mês anterior.<br>"
+    f"Estoque crítico: <strong>{kpis['Itens em Estoque Crítico']}</strong> itens.",
+    tone
+)
 add_spacing(0.8)
+
 
 # KPIs
 st.markdown("### 📈 Principais Indicadores")
