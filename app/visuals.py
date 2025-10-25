@@ -14,6 +14,8 @@ PALETTE = {
 }
 
 
+import streamlit as st
+
 def base_layout(fig, title: str):
     # Detecta tema ativo (dark/light)
     theme = st.get_option("theme.base")
@@ -57,7 +59,6 @@ def base_layout(fig, title: str):
     )
 
     return fig
-
 
 
 def plot_lucro_fornecedor(df, top_n=7):
