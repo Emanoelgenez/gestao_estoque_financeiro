@@ -135,7 +135,7 @@ pip install -r requirements.txt
 streamlit run main.py
 ```
 
-Acesse: `http://localhost:8501`
+Acesse: (https://gestaoestoquefinanceiro-bdoylabg4jzzxcvr5n[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://your-streamlit-app-url) ![Python](https://img.shields.io/badge/Python-3.11-blue) ![Streamlit](https://img.shields.io/badge/Streamlit-1.38-red) ![Plotly](https://img.shields.io/badge/Plotly-5.18-orange) ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)gtte.streamlit.app)
 
 ---
 
