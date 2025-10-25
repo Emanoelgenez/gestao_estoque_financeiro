@@ -188,8 +188,8 @@ Pull Requests bem-vindos!
 **Feito para quem decide com dados, não com achismo.**
 
 ## Autores
-Emanoel Genez 
-Guilherme de Andrade 
-Guilherme Ribeiro 
-Hugo Leonardo 
-Wendler José 
+* Emanoel Genez 
+* Guilherme de Andrade 
+* Guilherme Ribeiro 
+* Hugo Leonardo 
+* Wendler José 
